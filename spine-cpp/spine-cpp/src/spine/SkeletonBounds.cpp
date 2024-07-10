@@ -209,8 +209,8 @@ float SkeletonBounds::getHeight() {
 void SkeletonBounds::aabbCompute() {
 	float minX = FLT_MAX;
 	float minY = FLT_MAX;
-	float maxX = FLT_MIN;
-	float maxY = FLT_MIN;
+	float maxX = -FLT_MAX;
+	float maxY = -FLT_MAX;
 
 	for (size_t i = 0, n = _polygons.size(); i < n; ++i) {
 		spine::Polygon *polygon = _polygons[i];
